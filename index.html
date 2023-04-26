@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign up form</title>
     <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="script.js" defer></script>
 </head>
 <body>
     <div class="main-container">
@@ -47,7 +48,7 @@
                     </div>
                     <div>
                         <label for="phone">Phone Number</label><br>
-                        <input type="text" id="phone" name="phone" required>
+                        <input type="text" id="phone" name="phone" required pattern="^[0-9]+$">
                     </div>
                 </div>
                 <div class="input-row">
@@ -58,12 +59,13 @@
                     <div>
                         <label for="confirm-password">Confirm Password</label><br>
                         <input type="password" id="confirm-password" name="confirm-password" required>
+                        <div class="match-info"></div>
                     </div>
                 </div>
             </form>
         </div>
         <div>
-            <button class="submit-button" type="submit" form="signup-form">Create Accoount</button>
+            <button class="submit-button" type="submit" form="signup-form">Create Account</button>
             <div class="submit-text">Already have an account? <a href="#">Log in</a></div>
         </div>
         </div>

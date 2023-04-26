@@ -69,6 +69,7 @@ body{
     padding-bottom: 2rem;
     margin-top:2rem;
     background-color: #fff;
+    box-shadow: 0 3px 10px -2px gray;
 }
 
 #signup-form{
@@ -87,6 +88,27 @@ body{
     gap:5rem;
 }
 
+.submit-button{
+    color:#fff;
+    font-size: 1rem;
+    font-weight: bold;
+    height:3rem;
+    width: 12rem;
+    border: 2px solid #596D48;
+    box-shadow: 0 7px rgb(37, 65, 37);
+    border-radius: 5px;
+    background-color: #596D48;
+}
+.submit-button:active {
+    box-shadow: 0 0px rgb(37,65,37);
+    transform: translateY(4px);
+}
+
+a{
+    text-decoration: none;
+    color:#596D48;
+}
+
 .submit-button, .submit-text{
     margin-left: 4rem;
     margin-top:2rem;
@@ -99,18 +121,54 @@ label{
 
 input[type]{
     appearance: none;
-   height: 1.5rem;
-   width: 15rem;
-   border: 2px solid #E5E7EB;
+   height: 1.8rem;
+   width: 16.5rem;
+   border: 1px solid #E5E7EB;
    border-radius: 5px;
 }
 
-input:invalid:focus{
+
+input[type="text"]:focus:invalid,
+input[type="email"]:focus:invalid,
+#password:focus:invalid
+{
     outline: none;
-    border-color: red;
+    border-color: rgb(252, 78, 78);
+    box-shadow: 0 3px 2px -2px gray;
+    background-color: rgb(250, 209, 209);
 }
 
-input:focus:valid{
+input[type="text"]:focus:valid,
+input[type="email"]:focus:valid,
+#password:focus:valid
+{
     outline:none;
-    border-color: blue;
+    background-color:rgb(232, 240, 254);
+    border-color: rgb(63, 162, 228);
+    box-shadow: 0 3px 2px -2px gray;
+}
+
+input[type="text"]:valid,
+input[type="email"]:valid,
+#password:valid
+{
+    background-color: rgb(232, 240, 254);
+}
+
+#confirm-password:focus{
+    outline: none;
+    border-color: rgb(252, 78, 78);
+    box-shadow: 0 3px 2px -2px gray;
+    background-color: rgb(250, 209, 209);
+}
+
+.no-match-info::after{
+    content:"*Passwords do not match";
+    font-size: 1rem;
+    color: rgb(197, 38, 38);
+}
+
+.yes-match{
+    outline:none;
+    background-color:rgb(232, 240, 254);
 }
